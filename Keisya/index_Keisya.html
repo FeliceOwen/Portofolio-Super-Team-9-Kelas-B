@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile Keisya</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+        <style>
+            body {
+                background-color: pink;
+                font-family: 'Inter', sans-serif;
+
+                header {
+                    font-style: italic;
+                }
+                #nama, #hobi, #skills {
+                    background-color: beige;
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin: 10px;
+                }
+                #foto {
+                    margin: 10px;
+                }
+            }
+            .scroll-container {
+                display: flex;                 
+                overflow-x: auto;            
+                overflow-y: hidden;             
+                white-space: nowrap;            
+                gap: 15px;                    
+                padding: 10px;
+                scroll-snap-type: x mandatory; 
+                scroll-behavior: smooth;
+            }
+
+            .scroll-container img {
+                width: 500px;                   
+                height: 500px;                  
+                object-fit: cover;              
+                border-radius: 8px;             
+                flex-shrink: 0;  
+                background-color: beige;               
+            }
+
+            .scroll-container::-webkit-scrollbar {
+                height: 8px;                   
+            }
+            .scroll-container::-webkit-scrollbar-thumb {
+                background: #888;               
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Hi, get to know more about me!</h1>
+        </header>
+        <div id="nama">
+            <h2>What is my name?</h2>
+            <p>My full name is Natasya Keisya Hartono and you can call me with my nickname, Keisya!</p>
+        </div>
+
+        <div id="foto">
+            <h2>My photo albums</h2>
+            <p>Here's some of my picture so you can get to know how i look like</p>
+            <div class="scroll-container">
+                <img src="img_Keisya.png" alt="baju-baru">
+                <img src="C:\Users\keisy\OneDrive\Pictures\Keisya\Batu nunggal.jpg" alt="batu-nunggal">
+                <img src="C:\Users\keisy\OneDrive\Pictures\Keisya\Hi......JPG" alt="hi">
+                <img src="C:\Users\keisy\OneDrive\Pictures\Camera Roll\WIN_20251212_06_49_07_Pro.jpg" alt="di-kelas">             
+            </div>
+        </div>
+
+        <div id="hobi">
+            <h2>About hobies...</h2>
+            <p>I have a few hobies, such as cooking. But i don't really have time to do that actually...</p>
+        </div>
+
+        <div id="skills">
+            <h2>Skills</h2>
+            <p>I can do programming with some language such as Python, Java, R, HTML, CSS, and JS. I also can do SQL Query.</p>
+        </div>
+        
+    </body>
+</html>
