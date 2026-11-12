@@ -5,14 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile | Clarisa Helena</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         background-color: rgb(35, 164, 174);
+        font-family: Arial, sans-serif;
+        padding: 40px 20px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      img {
+        max-width: 250px;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        display: block;
+      }
+
+      .section {
+        background-color: #ffffff;
+        padding: 16px 20px;
+        margin-top: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        max-width: 600px;
+      }
+
+      .section h2 {
+        margin-bottom: 8px;
+        color: rgb(35, 164, 174);
+      }
+
+      .section ul {
+        list-style-position: inside;
+        line-height: 1.7;
+      }
+
+      .section p {
+        line-height: 1.6;
+        margin-bottom: 10px;
       }
     </style>
   </head>
   <body>
     <h1>Clarisa Helena</h1>
-    <img src="../img/img_Sasa.png" alt="Foto Profil" class="profile-img" />
+    <img src="../img/img_Sasa.png" alt="Foto Profil" />
+
     <div class="section">
       <h2>Hobi</h2>
       <ul>
@@ -31,6 +78,18 @@
           <strong>Database & Tools:</strong> SQL Server, Prisma, Git, Docker
         </li>
       </ul>
+    </div>
+
+    <!-- Tambahan Konten untuk Siklus-2 Langkah 2 -->
+    <div class="section">
+      <h2>Aktivitas Terakhir</h2>
+      <p>
+        Sedang mengerjakan proyek portofolio website bersama tim menggunakan
+        Github.
+      </p>
+
+      <!-- Pastikan Anda memiliki gambar aktivitas ini di folder img -->
+      <img src="../img/kegiatan_Sasa.jpg" alt="Foto Aktivitas Terakhir" />
     </div>
   </body>
 </html>
