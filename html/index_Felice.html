@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,11 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Felice</title>
+
     <style>
         * {
             background-color: #ffee99;
         }
-       body {
+
+        body {
             text-align: center;
         }
 
@@ -21,23 +24,79 @@
         p {
             font-size: 30px;
         }
+
+
+        .hobby-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .hobby-container img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .skills-container img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin: 0;
+        }
+
+        .activities img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Hi,Guys!</h1>
+    <h1>Hi, Guys!</h1>
 
     <img src="../img/foto_felice.png" width="500">
     <p>My name is Felice</p>
 
     <h1>Hobby</h1>
-    <p>Listening music</p>
-    <p>Badminton</p>
+
+    <div class="hobby-container">
+        <div>
+            <p>Listening Music</p>
+            <img src="../img/music.jpg">
+        </div>
+
+        <div>
+            <p>Badminton</p>
+            <img src="../img/badminton.jpg">
+        </div>
+    </div>
 
     <h1>Skills</h1>
-    <p>Java</p>
-    <p>Python</p>
-    <p>HTML</p>
+
+    <div class="skills-container">
+        <img src="../img/java.png">
+        <img src="../img/python.png">
+    </div>
+
+    <h1>Activities</h1>
+
+    <div class="activities">
+        <img src="../img/coding.jpg">
+        <p>Tubes</p>
+
+        <img src="../img/activity.jpg">
+        <p>Science Fest!!!</p>
+        
+    </div>
 
 </body>
 
