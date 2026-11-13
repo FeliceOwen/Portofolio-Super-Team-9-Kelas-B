@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,15 +6,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Super Team</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    * {
+        font-family: 'sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        background-image: url("background.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        color: #FFF0C2;
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 30px;
+        flex-wrap: nowrap;
+    }
+
+    .person {
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .person img {
+        object-fit: cover;
+        border-radius: 15px;
+        display: block;
+    }
+
+    #felice {
+        width: 200px;
+        height: 250px;
+    }
+
+    #anna {
+        width: 150px;
+        height: 200px;
+    }
+
+    #clarisa {
+        width: 180px;
+        height: 200px;
+    }
+
+    #keisya {
+        width: 220px;
+        height: 250px;
+    }
+
+    .person button {
+        margin-top: 15px;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 10px;
+        background-color: #6256A5;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .person button:hover {
+        background-color: #42377F;
+    }
+
+    </style>
 </head>
 
 <body>
-        <ul>
-            <li><a href="html/index_Felice.html">Profile Felice</a></li>
-            <li><a href="html/index_Anna.html">Profile Audrianna</a></li>
-            <li><a href="html/index_Clarisa.html">Profile Clarisa</a></li>
-            <li><a href="html/index_Keisya.html">Profile Keisya</a></li>
-        </ul>
+    <h1>Get to know us!</h1>
+
+    <div class="container">
+
+        <div class="person">
+            <img id="felice" src="img/foto_felice.png" alt="Felice">
+            <a href="html/index_Felice.html">
+                <button>Felice</button>
+            </a>
+        </div>
+
+        <div class="person">
+            <img id="anna" src="img/img_Anna.webp" alt="Audrianna">
+            <a href="html/index_Anna.html">
+                <button>Audrianna</button>
+            </a>
+        </div>
+
+        <div class="person">
+            <img id="clarisa" src="img/img_Sasa.png" alt="Clarisa">
+            <a href="html/index_Clarisa.html">
+                <button>Clarisa</button>
+            </a>
+        </div>
+
+        <div class="person">
+            <img id="keisya" src="img/img_Keisya.png" alt="Keisya">
+            <a href="html/index_Keisya.html">
+                <button>Keisya</button>
+            </a>
+        </div>
+
+    </div>
+
 </body>
 
 </html>
