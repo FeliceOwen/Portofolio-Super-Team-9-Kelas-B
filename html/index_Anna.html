@@ -10,38 +10,147 @@
         body {
             background-color: rgb(123, 208, 123);
         }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1, h2, h3 {
+            color: #287a46;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #287a46;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #1d5c34;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            width: 300px;
+            max-width: 80%;
+        }
+
+        .popup-content h2 {
+            margin-top: 0;
+        }
     </style>
 
 </head>
 <body>
 
-    <h1>Audrianna</h1>
+    <div class="container">
 
-    <img src="../img/img_Anna.webp" alt="Foto Audrianna" width="200">
+        <h1>Audrianna</h1>
 
-    <h3>Hobi:</h3>
-    <ul>
-        <li>Mendengarkan musik</li>
-        <li>Menonton film</li>
-        <li>Menari</li>
-    </ul>
+        <img src="../img/img_Anna.webp" alt="Foto Audrianna" width="200">
 
-    <h3>Keahlian:</h3>
-    <ul>
-        <li>Java</li>
-        <li>HTML</li>
-        <li>Python</li>
-    </ul>
+        <h3>Hobi:</h3>
+        <ul>
+            <li>Mendengarkan musik</li>
+            <li>Menonton film</li>
+            <li>Menari</li>
+        </ul>
 
-    <h3>Aktivitas Saat Ini</h3>
-    <div>
+        <h3>Keahlian:</h3>
+        <ul>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>Python</li>
+        </ul>
+
+        <h3>Aktivitas Saat Ini:</h3>
+        <div>
+            <p>
+                Saat ini saya sedang mengerjakan beberapa tugas besar kuliah bersama kelompok, untuk mata kuliah RPL, AI, dan DAG. 
+                Kegiatan yang kami lakukan seperti diskusi, membagi tugas, dan coding untuk mengembangkan perangkat lunak
+            </p>
+
+            <img src="../img/img_Anna_baca.jpg" width="200">
+            <img src="../img/img_Anna_mikir.jpg" width="200">
+        </div>
+
+        <h3>Asupan Penyemangat</h3>
+
+        <button onclick="kejutan()">Klik Disini!</button>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2>💌 Pesan untukmu!</h2>
+
+                <p id="isiPesan"></p>
+
+                <button onclick="tutupPopup()">OKEDEH!</button>
+            </div>
+        </div>
+
         <p>
-        Saat ini saya sedang mengerjakan beberapa tugas besar kuliah bersama kelompok, untuk mata kuliah RPL, AI, dan DAG. 
-        Kegiatan yang kami lakukan seperti diskusi, membagi tugas, dan coding untuk mengembangkan perangkat lunak
+            <small>
+                <i>*Ada banyak pesan di kotak ini!</i>
+            </small>
         </p>
-        <img src="../img/img_Anna_baca.jpg" width="200">
-        <img src="../img/img_Anna_mikir.jpg" width="200">
+
     </div>
+
+
+    <script>
+        function kejutan() {
+            var pesan = [
+                "Semua akan kulakukan, tapi bentar makan dulu.",
+                "Jangan menyerah, kecuali disuruh melewatkan jam makan.",
+                "Tugas boleh menumpuk, tapi perut jangan sampai kosong.",
+                "Masa depan memang harus diperjuangkan, tapi makan tetap harus didahulukan.",
+                "Kalau hidup terasa berat, mungkin kamu kurang makan.",
+                "Coding boleh error, asal jangan sampai jadwal makan ikut error.",
+                "Ingat, kamu tidak bisa mengejar mimpi dengan perut yang berbunyi.",
+                "Tetap semangat! Karena kenyang adalah kunci ketenangan.",
+                "Masalah boleh datang silih berganti, tapi jam makan jangan sampai terganti."
+            ];
+
+            var angka = Math.floor(Math.random() * pesan.length);
+
+            // alert(pesan[angka]);
+
+            document.getElementById("isiPesan").innerHTML = pesan[angka];
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function tutupPopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+    </script>
 
 </body>
 </html>
