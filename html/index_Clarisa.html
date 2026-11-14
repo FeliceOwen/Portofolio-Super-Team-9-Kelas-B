@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,84 +12,401 @@
       }
 
       body {
-        background-color: rgb(35, 164, 174);
-        font-family: Arial, sans-serif;
-        padding: 40px 20px;
-        color: #1a1a1a;
+        font-family: system-ui, "Segoe UI", Arial, sans-serif;
+        background: #ffeef6;
+        color: #3b3355;
+        padding: 36px 16px 60px;
+      }
+
+      main {
+        max-width: 640px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .card {
+        background: #fff;
+        border: 3px solid #3b3355;
+        border-radius: 20px;
+        padding: 22px;
+      }
+
+      .pink {
+        background: #ffd3e2;
+      }
+
+      .yellow {
+        background: #fff2a8;
+      }
+
+      h1,
+      h2,
+      footer,
+      figcaption,
+      .value {
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
       }
 
       h1 {
+        font-size: 36px;
         text-align: center;
+        margin-bottom: 6px;
+      }
+
+      h2 {
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      p {
+        line-height: 1.7;
+        font-weight: 500;
+      }
+
+      .badge,
+      .chip,
+      .skill-label {
+        display: inline-block;
+        border: 3px solid #3b3355;
+        border-radius: 999px;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      }
+
+      .badge {
+        background: #fff2a8;
+        padding: 4px 14px;
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+
+      .dot {
+        width: 30px;
+        height: 30px;
+        border: 3px solid #3b3355;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        font-size: 16px;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .foto {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        border: 3px solid #3b3355;
+        border-radius: 50%;
+        display: block;
+        margin: auto auto 12px;
+      }
+
+      .hobi-grid {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .hobi-item {
+        flex: 1 1 150px;
+        border: 3px solid #3b3355;
+        border-radius: 14px;
+        padding: 16px 14px;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .hobi-item span {
+        display: block;
+        font-size: 32px;
+        margin-bottom: 8px;
+      }
+
+      .skill-group {
+        margin-bottom: 14px;
+      }
+
+      .skill-label {
+        background: #b8f0e6;
+        padding: 3px 14px;
+        font-size: 14px;
         margin-bottom: 10px;
       }
 
-      img {
-        max-width: 250px;
-        height: auto;
-        margin-bottom: 10px;
-        border-radius: 8px;
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        background: #fff;
+        padding: 6px 14px;
+        font-size: 15px;
+      }
+
+      .chart {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 14px;
+      }
+
+      .skill-ring {
+        border: 3px solid #3b3355;
+        border-radius: 14px;
+        padding: 14px 8px;
+        text-align: center;
+      }
+
+      .ring {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: auto auto 6px;
+      }
+
+      .ring svg {
+        transform: rotate(-90deg);
         display: block;
       }
 
-      .section {
-        background-color: #ffffff;
-        padding: 16px 20px;
-        margin-top: 16px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-        max-width: 600px;
+      .ring circle {
+        fill: none;
+        stroke-width: 12;
       }
 
-      .section h2 {
-        margin-bottom: 8px;
-        color: rgb(35, 164, 174);
+      .track {
+        stroke: #eee7f3;
       }
 
-      .section ul {
-        list-style-position: inside;
-        line-height: 1.7;
+      .bar {
+        stroke-linecap: round;
+        stroke-dasharray: 263.9;
+        stroke-dashoffset: 263.9;
+        transition: stroke-dashoffset 1.2s ease;
       }
 
-      .section p {
-        line-height: 1.6;
-        margin-bottom: 10px;
+      .value {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        font-size: 21px;
+      }
+
+      .skill-name {
+        display: block;
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      figure {
+        background: #fff;
+        border: 3px solid #3b3355;
+        border-radius: 12px;
+        padding: 10px;
+        max-width: 440px;
+        margin: auto;
+      }
+
+      figure img {
+        width: 100%;
+        display: block;
+        border-radius: 6px;
+      }
+
+      figcaption {
+        text-align: center;
+        padding-top: 8px;
+      }
+
+      footer {
+        text-align: center;
+        border: 3px solid #3b3355;
+        border-radius: 999px;
+        padding: 12px;
+      }
+
+      .fx {
+        position: fixed;
+        font-size: 22px;
+        pointer-events: none;
+        z-index: 40;
+        animation: fadeUp 0.9s ease forwards;
+      }
+
+      @keyframes fadeUp {
+        from {
+          transform: translate(-50%, -50%);
+          opacity: 1;
+        }
+        to {
+          transform: translate(-50%, -180%);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 560px) {
+        h1 {
+          font-size: 30px;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>Clarisa Helena</h1>
-    <img src="../img/img_Sasa.png" alt="Foto Profil" />
+    <main>
+      <header class="card hero">
+        <img class="foto" src="../img/img_Sasa.png" alt="Foto Clarisa Helena" />
+        <span class="badge">itu aku!</span>
+        <h1>Clarisa Helena</h1>
+      </header>
 
-    <div class="section">
-      <h2>Hobi</h2>
-      <ul>
-        <li>Bermain padel</li>
-        <li>Traveling</li>
-        <li>Bermain game</li>
-      </ul>
-    </div>
+      <section class="card">
+        <h2>Hobi</h2>
+        <div class="hobi-grid">
+          <div class="hobi-item"><span>🏊🏻‍♀️</span>Berenang</div>
+          <div class="hobi-item"><span>✈️</span>Traveling</div>
+          <div class="hobi-item"><span>👩🏻‍💻</span>Bermain game</div>
+        </div>
+      </section>
 
-    <div class="section">
-      <h2>Keahlian</h2>
-      <ul>
-        <li><strong>Bahasa Pemrograman:</strong> JavaScript, Python, Go</li>
-        <li><strong>Framework & Library:</strong> Next.js, Node.js, React</li>
-        <li>
-          <strong>Database & Tools:</strong> SQL Server, Prisma, Git, Docker
-        </li>
-      </ul>
-    </div>
+      <section class="card">
+        <h2>Keahlian</h2>
+        <div class="skill-group">
+          <span class="skill-label pink">Bahasa Pemrograman</span>
+          <div class="chips">
+            <span class="chip">JavaScript</span>
+            <span class="chip">Python</span>
+            <span class="chip">Go</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Framework &amp; Library</span>
+          <div class="chips">
+            <span class="chip">Node.js</span>
+            <span class="chip">React</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label yellow">Database &amp; Tools</span>
+          <div class="chips">
+            <span class="chip">SQL Server</span>
+            <span class="chip">Git</span>
+          </div>
+        </div>
+      </section>
 
-    <!-- Tambahan Konten untuk Siklus-2 Langkah 2 -->
-    <div class="section">
-      <h2>Aktivitas Terakhir</h2>
-      <p>
-        Sedang mengerjakan proyek portofolio website bersama tim menggunakan
-        Github.
-      </p>
+      <section class="card">
+        <h2><span class="dot yellow">📊</span> Grafik Skill</h2>
+        <div class="chart" id="skillChart"></div>
+      </section>
 
-      <!-- Pastikan Anda memiliki gambar aktivitas ini di folder img -->
-      <img src="../img/kegiatan_Sasa.jpg" alt="Foto Aktivitas Terakhir" />
-    </div>
+      <section class="card">
+        <h2>Aktivitas Terakhir</h2>
+        <p>
+          Sedang mengerjakan proyek portofolio website bersama tim menggunakan
+          Github.
+        </p>
+        <figure>
+          <img src="../img/kegiatan_Sasa.jpg" alt="Foto Aktivitas Terakhir" />
+          <figcaption>ngoding bareng tim</figcaption>
+        </figure>
+      </section>
+
+      <footer class="yellow">made with 💌 by Clarisa</footer>
+    </main>
+
+    <script>
+      const daftarHati = ["🩷", "💛", "💚", "🩵", "💙", "💜", "🩶"];
+
+      const daftarSkill = [
+        ["JavaScript", 88, "#ff7fae"],
+        ["Python", 82, "#2bb3a3"],
+        ["Go", 64, "#8f7dff"],
+        ["Node.js", 78, "#ff7fae"],
+        ["React", 85, "#2bb3a3"],
+        ["SQL Server", 72, "#8f7dff"],
+        ["Git", 90, "#ff7fae"],
+      ];
+
+      const chart = document.getElementById("skillChart");
+      const keliling = 263.9;
+      let waktuTerakhir = 0;
+
+      function munculHati(x, y, jumlah) {
+        for (let i = 0; i < jumlah; i++) {
+          const hatiBaru = document.createElement("span");
+          hatiBaru.className = "fx";
+          hatiBaru.textContent =
+            daftarHati[Math.floor(Math.random() * daftarHati.length)];
+          hatiBaru.style.left = x + Math.floor(Math.random() * 70 - 35) + "px";
+          hatiBaru.style.top = y + Math.floor(Math.random() * 70 - 35) + "px";
+          document.body.appendChild(hatiBaru);
+
+          setTimeout(function () {
+            hatiBaru.remove();
+          }, 900);
+        }
+      }
+
+      let isiKartu = "";
+      for (let i = 0; i < daftarSkill.length; i++) {
+        isiKartu +=
+          '<div class="skill-ring">' +
+          '<div class="ring">' +
+          '<svg viewBox="0 0 100 100" width="100" height="100">' +
+          '<circle class="track" cx="50" cy="50" r="42"></circle>' +
+          '<circle class="bar" cx="50" cy="50" r="42" stroke="' +
+          daftarSkill[i][2] +
+          '"></circle>' +
+          "</svg>" +
+          '<span class="value">0%</span>' +
+          "</div>" +
+          '<span class="skill-name">' +
+          daftarSkill[i][0] +
+          "</span>" +
+          "</div>";
+      }
+      chart.innerHTML = isiKartu;
+
+      setTimeout(function () {
+        const semuaBar = chart.querySelectorAll(".bar");
+        const semuaNilai = chart.querySelectorAll(".value");
+
+        for (let i = 0; i < daftarSkill.length; i++) {
+          const nilai = daftarSkill[i][1];
+          semuaBar[i].style.strokeDashoffset =
+            keliling - (keliling * nilai) / 100;
+        }
+
+        const mulai = Date.now();
+        const jalan = setInterval(function () {
+          const progress = Math.min((Date.now() - mulai) / 1300, 1);
+          for (let i = 0; i < daftarSkill.length; i++) {
+            const nilai = daftarSkill[i][1];
+            semuaNilai[i].textContent = Math.round(nilai * progress) + "%";
+          }
+          if (progress === 1) clearInterval(jalan);
+        }, 30);
+      }, 150);
+
+      document.addEventListener("mousemove", function (e) {
+        const sekarang = Date.now();
+        if (sekarang - waktuTerakhir < 100) return;
+        waktuTerakhir = sekarang;
+        munculHati(e.clientX, e.clientY, 1);
+      });
+
+      document.addEventListener("click", function (e) {
+        munculHati(e.clientX, e.clientY, 10);
+      });
+    </script>
   </body>
 </html>
