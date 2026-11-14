@@ -7,97 +7,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Felice</title>
 
+    <script src="../js/script.js" defer></script>
+
     <style>
         * {
-            background-color: #ffee99;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             text-align: center;
+            background-color: #fff8df;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #55452d;
+            padding: 40px 20px;
         }
 
-        img {
-            display: block;
-            margin: auto;
+        h1 {
+            color: #a87926;
+            font-size: 36px;
+            margin: 35px 0 25px;
+        }
+
+        .section {
+            margin-bottom: 55px;
         }
 
         p {
-            font-size: 30px;
+            font-size: 22px;
+            margin: 15px 0;
         }
 
+        .foto {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid white;
+            box-shadow: 0 5px 15px #d9c58d;
+        }
 
-        .hobby-container {
+        .nama {
+            font-size: 28px;
+            font-weight: bold;
+            color: #8b672c;
+            margin: 20px 0 40px;
+        }
+
+        .hobby,
+        .activities {
             display: flex;
             justify-content: center;
-            gap: 50px;
+            align-items: stretch;
+            gap: 40px;
+            flex-wrap: wrap;
         }
 
-        .hobby-container img {
-            width: 200px;
-            height: 150px;
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px #e5d7ad;
+        }
+
+        .hobby img {
+            width: 250px;
+            height: 180px;
             object-fit: cover;
+            border-radius: 15px;
         }
 
-        .skills-container {
+        .skill {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 40px;
         }
 
-        .skills-container img {
+        .skill img {
             width: 150px;
             height: 150px;
             object-fit: contain;
-            margin: 0;
+            background-color: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px #e5d7ad;
         }
 
         .activities img {
-            width: 400px;
-            height: 250px;
+            width: 350px;
+            height: 230px;
             object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .desc {
+            font-size: 15px;
+            color: #806e50;
+            line-height: 1.5;
+            max-width: 320px;
+            margin: 10px auto;
+        }
+
+        .interaksi {
+            margin: 40px 0;
+        }
+
+        button {
+            background-color: #e9bd63;
+            color: #55452d;
+            border: none;
+            padding: 13px 22px;
+            margin: 8px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .confetti {
+            position: fixed;
+            top: -20px;
+            font-size: 25px;
+            pointer-events: none;
+            animation: fall 3s linear forwards;
+            z-index: 999;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+                opacity: 0;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Hi, Guys!</h1>
+    <div class="section">
+        <h1>Hi, Guys! ✨</h1>
+        <img class="foto" src="../img/foto_felice.png">
+        <p class="nama">My name is Felice</p>
+    </div>
 
-    <img src="../img/foto_felice.png" width="500">
-    <p>My name is Felice</p>
+    <div class="section">
+        <h1>My Hobbies</h1>
+        <div class="hobby">
+            <div class="card">
+                <p>Listening Music</p>
+                <img src="../img/music.jpg">
+            </div>
 
-    <h1>Hobby</h1>
-
-    <div class="hobby-container">
-        <div>
-            <p>Listening Music</p>
-            <img src="../img/music.jpg">
-        </div>
-
-        <div>
-            <p>Badminton</p>
-            <img src="../img/badminton.jpg">
+            <div class="card">
+                <p>Badminton</p>
+                <img src="../img/badminton.jpg">
+            </div>
         </div>
     </div>
 
-    <h1>Skills</h1>
-
-    <div class="skills-container">
-        <img src="../img/java.png">
-        <img src="../img/python.png">
+    <div class="section">
+        <h1>My Skills</h1>
+        <div class="skill">
+            <img src="../img/java.png">
+            <img src="../img/python.png">
+        </div>
     </div>
 
-    <h1>Activities</h1>
+    <div class="section">
+        <h1>My Activities</h1>
+        <div class="activities">
+            <div class="card">
+                <img src="../img/coding.jpg">
+                <p>Coding & Assignments </p>
+                <p class="desc">
+                    Working on college assignments and projects.
+                </p>
+            </div>
 
-    <div class="activities">
-        <img src="../img/coding.jpg">
-        <p>Tubes</p>
+            <div class="card">
+                <img src="../img/activity.jpg">
+                <p>Science Fest Committee</p>
+                <p class="desc">
+                    Being part of the Science Fest committee.
+                </p>
+            </div>
+        </div>
 
-        <img src="../img/activity.jpg">
-        <p>Science Fest!!!</p>
-        
+    </div>
+        <div class="interaksi">
+        <button onclick="changeBackground()">🎨 Change Background</button>
+        <button onclick="showConfetti()">🎉 Celebrate!</button>
     </div>
 
 </body>
-
 </html>
